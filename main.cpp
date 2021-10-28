@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
 
 class Headphones{
     protected: 
@@ -13,10 +12,8 @@ class Headphones{
         price=p;
     }
     virtual ~Headphones() { 
-        cout << "Destruct headphones" << endl; }
-    virtual void show(){
-
-    }
+        std::cout << "Destruct headphones" << std::endl; }
+    virtual void show()=0;
     Headphones(const Headphones&) = delete; 
     Headphones& operator=(const Headphones&) = delete; 
     Headphones(Headphones&&) = delete; 
@@ -30,7 +27,7 @@ class Wired: public Headphones{
         wire_length=l;
     }
     ~ Wired() { 
-        cout << "Destruct headphones" << endl; }
+        std::cout << "Destruct headphones" << std::endl; }
     Wired(const Wired&) = delete; 
     Wired& operator=(const Wired&) = delete; 
     Wired(Wired&&) = delete; 
@@ -45,7 +42,7 @@ class Wireless: public Headphones{
         range=r;
     }
     ~ Wireless() { 
-        cout << "Destruct headphones" << endl; }
+        std::cout << "Destruct headphones" << std::endl; }
 
     Wireless(const Wireless&) = delete; 
     Wireless& operator=(const Wireless&) = delete; 
@@ -55,15 +52,15 @@ class Wireless: public Headphones{
 };
 
 void Wired::show(){
-    cout<<"\nName: "<<name;
-    cout<<"\nPrice: "<<price;
-    cout<<"\nWire length:  "<<wire_length;
+    std::cout<<"\nName: "<<name;
+    std::cout<<"\nPrice: "<<price;
+    std::cout<<"\nWire length:  "<<wire_length;
 
-
+}
 void Wireless::show(){
-    cout<<"\nName: "<<name;
-    cout<<"\nPrice: "<<price;
-    cout<<"\nrange:  "<<range;
+    std::cout<<"\nName: "<<name;
+    std::cout<<"\nPrice: "<<price;
+    std::cout<<"\nrange:  "<<range;
 
 }
 
@@ -75,32 +72,32 @@ int main(){
     Headphones* obj;
     while (1)
     {
-        cout<<"1 - Wired | 2 - Wireless | 0 - Quit: ";
-        cin>>option;
+        std::cout<<"1 - Wired | 2 - Wireless | 0 - Quit: ";
+        std::cin>>option;
 
         switch (option)
         {
         case 1:
-            cout<<"\n Enter wired headphones specifications:\n";
-            cout<<"\n Name: ";
-            cin>>name;
-            cout<<"\n Price: ";
-            cin>>price;
-            cout<<"\n Wire length: ";
-            cin>>wire_length;
+            std::cout<<"\n Enter wired headphones specifications:\n";
+            std::cout<<"\n Name: ";
+            std::cin>>name;
+            std::cout<<"\n Price: ";
+            std::cin>>price;
+            std::cout<<"\n Wire length: ";
+            std::cin>>wire_length;
             obj=  new Wired (name, price, wire_length);
-            cout<<"\n";
+            std::cout<<"\n";
             break;
 
         case 2:
-            cout<<"\n Enter wireless headphones specifications:\n";
-            cout<<"\n Name: ";
-            cin>>name;
-            cout<<"\n Price: ";
-            cin>>price;
-            cout<<"\n Range: ";
-            cin>>range;
-            cout<<"\n";
+            std::cout<<"\n Enter wireless headphones specifications:\n";
+            std::cout<<"\n Name: ";
+            std::cin>>name;
+            std::cout<<"\n Price: ";
+            std::cin>>price;
+            std::cout<<"\n Range: ";
+            std::cin>>range;
+            std::cout<<"\n";
             obj=  new Wireless(name, price, range);
             break;    
 
@@ -112,7 +109,7 @@ int main(){
         if(done) 
         break;
 
-        cout<<endl;
+        std::cout<<std::endl;
     }
 
     return 0;
@@ -122,10 +119,10 @@ int main(){
     //headphones* list[2];
     //list[0] = headphones1;
     //list[1] = headphones2;
-    //cout<<"\n Headphones: ";
-    //cout<<" Wired: ";
+    //std::cout<<"\n Headphones: ";
+    //std::cout<<" Wired: ";
     //headphones1.show();
-    //cout<<"\n";
-    //cout<<" Wireless: ";
+    //std::cout<<"\n";
+    //std::cout<<" Wireless: ";
     //headphones2.show();
     //return 0;
