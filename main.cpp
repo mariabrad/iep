@@ -2,39 +2,45 @@
 #include <cstring>
 using namespace std;
 
-class headphones{
+class Headphones{
     protected: 
     char name[100];
     float price;
     public:
-    headphones( char*n, float p){
+    Headphones( char*n, float p){
         strcpy(name,n);
         price=p;
     }
+    virtual ~Headphones() { 
+        cout << "Destruct headphones" << endl; }
     virtual void show(){
 
     }
 };
 
-class wired: public headphones{
+class Wired: public Headphones{
     int wire_length;
     public:
-    wired(char * n, float p, int l): headphones(n,p){
+    Wired(char * n, float p, int l): Headphones(n,p){
         wire_length=l;
     }
+    ~ Wired() { 
+        cout << "Destruct headphones" << endl; }
     void show();
 };
 
-class wireless: public headphones{
+class Wireless: public Headphones{
     int broadband;
     public:
-    wireless(char * n, float p, int b): headphones(n,p){
+    Wireless(char * n, float p, int b): Headphones(n,p){
         broadband=b;
     }
+    ~ Wireless() { 
+        cout << "Destruct headphones" << endl; }
     void show();
 };
 
-void wired::show(){
+void Wired::show(){
     cout<<"\nName: "<<name;
     cout<<"\nPrice: "<<price;
     cout<<"\nWire length:  "<<wire_length;
@@ -43,7 +49,7 @@ void wired::show(){
 
 
 
-void wireless::show(){
+void Wireless::show(){
     cout<<"\nName: "<<name;
     cout<<"\nPrice: "<<price;
     cout<<"\nBroadband:  "<<broadband;
@@ -53,32 +59,60 @@ void wireless::show(){
 int main(){
     char* name = new char[100];
     float price;
-    int wire_length, broadband;
-    cout<<"\n Enter wired headphones specifications\n";
-    cout<<"\n Name: ";
-    cin>>name;
-    cout<<"\n Price: ";
-    cin>>price;
-    cout<<"\n Wire length: ";
-    cin>>wire_length;
-    wired headphones1(name, price, wire_length);
-    cout<<"\n Enter wireless headphones specifications\n";
-    cout<<"\n Name: ";
-    cin>>name;
-    cout<<"\n Price: ";
-    cin>>price;
-    cout<<"\n Broadband: ";
-    cin>>broadband;
-    wireless headphones2(name, price, broadband);
+    int wire_length, broadband,option;
+    bool done = false;
+    Headphones* obj;
+    while (1)
+    {
+        cout<<"1 - Wired | 2 - Wireless | 0 - Quit: ";
+        cin>>option;
 
-    //headphones* list[2];
-   //list[0] = headphones1;
-    //list[1] = headphones2;
-    cout<<"\n Headphones: ";
-    cout<<" Wired: ";
-    headphones1.show();
-    cout<<"\n";
-    cout<<" Wireless: ";
-    headphones2.show();
+        switch (option)
+        {
+        case 1:
+            cout<<"\n Enter wired headphones specifications\n";
+            cout<<"\n Name: ";
+            cin>>name;
+            cout<<"\n Price: ";
+            cin>>price;
+            cout<<"\n Wire length: ";
+            cin>>wire_length;
+            obj=  new Wired (name, price, wire_length);
+            break;
+
+        case 2:
+            cout<<"\n Enter wireless headphones specifications\n";
+            cout<<"\n Name: ";
+            cin>>name;
+            cout<<"\n Price: ";
+            cin>>price;
+            cout<<"\n Broadband: ";
+            cin>>broadband;
+            obj=  new Wireless(name, price, broadband);
+            break;    
+
+        case 0:
+            done = true;
+            break;
+        }
+
+        if(done) 
+        break;
+
+        cout<<endl;
+    }
+
     return 0;
 }
+
+
+   //headphones* list[2];
+    //list[0] = headphones1;
+    //list[1] = headphones2;
+    //cout<<"\n Headphones: ";
+    //cout<<" Wired: ";
+    //headphones1.show();
+    //cout<<"\n";
+    //cout<<" Wireless: ";
+    //headphones2.show();
+    //return 0;
