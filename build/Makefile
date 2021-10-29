@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+headphones.o: headphones.cpp.o
+
+.PHONY : headphones.o
+
+# target to build an object file
+headphones.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.o
+.PHONY : headphones.cpp.o
+
+headphones.i: headphones.cpp.i
+
+.PHONY : headphones.i
+
+# target to preprocess a source file
+headphones.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.i
+.PHONY : headphones.cpp.i
+
+headphones.s: headphones.cpp.s
+
+.PHONY : headphones.s
+
+# target to generate assembly for a file
+headphones.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.s
+.PHONY : headphones.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... headphones.o"
+	@echo "... headphones.i"
+	@echo "... headphones.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
