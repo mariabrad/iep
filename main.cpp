@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstring>
-#include "headphones.cpp"
-#include "wired.cpp"
-#include "wireless.cpp"
+#include "headphones.h"
+#include "wired.h"
+#include "wireless.h"
 
 
 int main(){

@@ -6,9 +6,33 @@
 
 #IncludeRegexTransform: 
 
+/home/maria/IEP/rep/headphones.cpp
+
 /home/maria/IEP/rep/main.cpp
 iostream
 -
 cstring
 -
+headphones.cpp
+/home/maria/IEP/rep/headphones.cpp
+wired.cpp
+/home/maria/IEP/rep/wired.cpp
+wireless.cpp
+/home/maria/IEP/rep/wireless.cpp
+
+/home/maria/IEP/rep/wired.cpp
+iostream
+-
+cstring
+-
+headphones.cpp
+/home/maria/IEP/rep/headphones.cpp
+
+/home/maria/IEP/rep/wireless.cpp
+iostream
+-
+cstring
+-
+headphones.cpp
+/home/maria/IEP/rep/headphones.cpp
 
