@@ -1,68 +1,9 @@
 #include <iostream>
 #include <cstring>
+#include "headphones.cpp"
+#include "wired.cpp"
+#include "wireless.cpp"
 
-
-class Headphones{
-    protected: 
-    char name[100];
-    float price;
-    public:
-    Headphones( char*n, float p){
-        strcpy(name,n);
-        price=p;
-    }
-    virtual ~Headphones() { 
-        std::cout << "Destruct headphones" << std::endl; }
-    virtual void show()=0;
-    Headphones(const Headphones&) = delete; 
-    Headphones& operator=(const Headphones&) = delete; 
-    Headphones(Headphones&&) = delete; 
-    Headphones& operator=(Headphones&&) = delete;
-};
-
-class Wired: public Headphones{
-    int wire_length;
-    public:
-    Wired(char * n, float p, int l): Headphones(n,p){
-        wire_length=l;
-    }
-    ~ Wired() { 
-        std::cout << "Destruct headphones" << std::endl; }
-    Wired(const Wired&) = delete; 
-    Wired& operator=(const Wired&) = delete; 
-    Wired(Wired&&) = delete; 
-    Wired& operator=(Wired&&) = delete;
-    void show();
-};
-
-class Wireless: public Headphones{
-    int range;
-    public:
-    Wireless(char * n, float p, int r): Headphones(n,p){
-        range=r;
-    }
-    ~ Wireless() { 
-        std::cout << "Destruct headphones" << std::endl; }
-
-    Wireless(const Wireless&) = delete; 
-    Wireless& operator=(const Wireless&) = delete; 
-    Wireless(Wireless&&) = delete; 
-    Wireless& operator=(Wireless&&) = delete;
-    void show();
-};
-
-void Wired::show(){
-    std::cout<<"\nName: "<<name;
-    std::cout<<"\nPrice: "<<price;
-    std::cout<<"\nWire length:  "<<wire_length;
-
-}
-void Wireless::show(){
-    std::cout<<"\nName: "<<name;
-    std::cout<<"\nPrice: "<<price;
-    std::cout<<"\nrange:  "<<range;
-
-}
 
 int main(){
     char* name = new char[100];
@@ -85,7 +26,7 @@ int main(){
             std::cin>>price;
             std::cout<<"\n Wire length: ";
             std::cin>>wire_length;
-            obj=  new Wired (name, price, wire_length);
+            obj=  new Wired(name, price, wire_length);
             std::cout<<"\n";
             break;
 
