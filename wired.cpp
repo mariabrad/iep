@@ -2,7 +2,7 @@
 
 
 Wired::Wired(char* n, float p, int l): Headphones(n,p){
-    setWireLength(l);
+    wire_length=l;
 }
 Wired::~Wired() { 
     std::cout << "Destruct headphones" << std::endl; }

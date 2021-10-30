@@ -1,8 +1,8 @@
 #include "wireless.h"
 
 Wireless::Wireless(char * n, float p, int r): Headphones(n,p){
-        setRange(r);
-    }
+    range=1;
+}
 Wireless::~Wireless() { 
         std::cout << "Destruct headphones" << std::endl; }
 

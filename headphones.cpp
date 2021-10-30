@@ -2,8 +2,8 @@
 #include <string.h>
 
 Headphones::Headphones( char*n, float p){
-  setName(n);
-  setPrice(p);
+  name=n;
+  price=p;
 }
 
 Headphones::~Headphones() { 
