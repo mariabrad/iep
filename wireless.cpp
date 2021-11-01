@@ -17,3 +17,4 @@ void Wireless::show(){
 int Wireless::getRange() {return range;}
 
 void Wireless::setRange(const float&  w) {range=w;}
+
