@@ -2,11 +2,11 @@
 
 #include <iostream>
 #include <cstring>
-#include "headphones.h"
+#include "headphones.hpp"
 
 class Wireless: public Headphones{
     public:
-    Wireless(char * n, float p, int r);
+    Wireless(char * n, float p,float s, float freq, float in, int r);
     ~ Wireless();
     Wireless(const Wireless&);
     Wireless& operator=(const Wireless&) = delete; 

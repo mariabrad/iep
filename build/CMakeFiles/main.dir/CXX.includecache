@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-../Headphones/headphones.h
+../Headphones/headphones.hpp
 iostream
 -
 cstring
 -
 
-../Wired/wired.h
+../Wired/wired.hpp
 iostream
 -
 cstring
 -
-headphones.h
-../Wired/headphones.h
+headphones.hpp
+../Wired/headphones.hpp
 
-../Wireless/wireless.h
+../Wireless/wireless.hpp
 iostream
 -
 cstring
 -
-headphones.h
-../Wireless/headphones.h
+headphones.hpp
+../Wireless/headphones.hpp
 
 /home/maria/IEP/rep/src/main.cpp
 iostream
 -
 cstring
 -
-headphones.h
-/home/maria/IEP/rep/src/headphones.h
-wired.h
-/home/maria/IEP/rep/src/wired.h
-wireless.h
-/home/maria/IEP/rep/src/wireless.h
+headphones.hpp
+/home/maria/IEP/rep/src/headphones.hpp
+wired.hpp
+/home/maria/IEP/rep/src/wired.hpp
+wireless.hpp
+/home/maria/IEP/rep/src/wireless.hpp
 

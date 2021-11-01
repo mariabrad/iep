@@ -4,7 +4,7 @@
 
 class Headphones{
     public:
-    Headphones( std::string n, float p);
+    Headphones( std::string n, float p,float s, float freq, float in);
     virtual ~Headphones();
     virtual void show()=0;
     Headphones(const Headphones&);
@@ -19,4 +19,7 @@ class Headphones{
     protected:
         float price;
         std::string name;
+        float sensitivity;
+        float frequency_response;
+        float input_power;
 };

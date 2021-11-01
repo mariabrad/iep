@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../Headphones/headphones.h
+../Headphones/headphones.hpp
 iostream
 -
 cstring
 -
 
 /home/maria/IEP/rep/Wireless/wireless.cpp
-wireless.h
-/home/maria/IEP/rep/Wireless/wireless.h
+wireless.hpp
+/home/maria/IEP/rep/Wireless/wireless.hpp
 
-/home/maria/IEP/rep/Wireless/wireless.h
+/home/maria/IEP/rep/Wireless/wireless.hpp
 iostream
 -
 cstring
 -
-headphones.h
-/home/maria/IEP/rep/Wireless/headphones.h
+headphones.hpp
+/home/maria/IEP/rep/Wireless/headphones.hpp
 
