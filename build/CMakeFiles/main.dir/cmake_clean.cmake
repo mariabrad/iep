@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/headphones.cpp.o"
-  "CMakeFiles/main.dir/main.cpp.o"
-  "CMakeFiles/main.dir/wired.cpp.o"
-  "CMakeFiles/main.dir/wireless.cpp.o"
+  "CMakeFiles/main.dir/src/main.cpp.o"
   "main"
   "main.pdb"
 )

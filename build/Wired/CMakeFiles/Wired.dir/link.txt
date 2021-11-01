@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWired.a  CMakeFiles/Wired.dir/wired.cpp.o
+/usr/bin/ranlib libWired.a

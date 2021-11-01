@@ -1,0 +1,2 @@
+/usr/bin/ar qc libHeadphones.a  CMakeFiles/Headphones.dir/headphones.cpp.o
+/usr/bin/ranlib libHeadphones.a

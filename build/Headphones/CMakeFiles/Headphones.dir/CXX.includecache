@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/IEP/rep/Headphones/headphones.cpp
+headphones.h
+/home/maria/IEP/rep/Headphones/headphones.h
+string.h
+-
+
+/home/maria/IEP/rep/Headphones/headphones.h
+iostream
+-
+cstring
+-
+

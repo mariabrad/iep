@@ -123,113 +123,71 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-headphones.o: headphones.cpp.o
+#=============================================================================
+# Target rules for targets named Wired
 
-.PHONY : headphones.o
+# Build rule for target.
+Wired: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Wired
+.PHONY : Wired
 
-# target to build an object file
-headphones.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.o
-.PHONY : headphones.cpp.o
+# fast build rule for target.
+Wired/fast:
+	$(MAKE) -f Wired/CMakeFiles/Wired.dir/build.make Wired/CMakeFiles/Wired.dir/build
+.PHONY : Wired/fast
 
-headphones.i: headphones.cpp.i
+#=============================================================================
+# Target rules for targets named Wireless
 
-.PHONY : headphones.i
+# Build rule for target.
+Wireless: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Wireless
+.PHONY : Wireless
 
-# target to preprocess a source file
-headphones.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.i
-.PHONY : headphones.cpp.i
+# fast build rule for target.
+Wireless/fast:
+	$(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/build
+.PHONY : Wireless/fast
 
-headphones.s: headphones.cpp.s
+#=============================================================================
+# Target rules for targets named Headphones
 
-.PHONY : headphones.s
+# Build rule for target.
+Headphones: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Headphones
+.PHONY : Headphones
 
-# target to generate assembly for a file
-headphones.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/headphones.cpp.s
-.PHONY : headphones.cpp.s
+# fast build rule for target.
+Headphones/fast:
+	$(MAKE) -f Headphones/CMakeFiles/Headphones.dir/build.make Headphones/CMakeFiles/Headphones.dir/build
+.PHONY : Headphones/fast
 
-main.o: main.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-wired.o: wired.cpp.o
-
-.PHONY : wired.o
+.PHONY : src/main.o
 
 # target to build an object file
-wired.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wired.cpp.o
-.PHONY : wired.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-wired.i: wired.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : wired.i
-
-# target to preprocess a source file
-wired.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wired.cpp.i
-.PHONY : wired.cpp.i
-
-wired.s: wired.cpp.s
-
-.PHONY : wired.s
-
-# target to generate assembly for a file
-wired.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wired.cpp.s
-.PHONY : wired.cpp.s
-
-wireless.o: wireless.cpp.o
-
-.PHONY : wireless.o
-
-# target to build an object file
-wireless.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wireless.cpp.o
-.PHONY : wireless.cpp.o
-
-wireless.i: wireless.cpp.i
-
-.PHONY : wireless.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-wireless.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wireless.cpp.i
-.PHONY : wireless.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-wireless.s: wireless.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : wireless.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-wireless.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/wireless.cpp.s
-.PHONY : wireless.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -240,18 +198,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... headphones.o"
-	@echo "... headphones.i"
-	@echo "... headphones.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... wired.o"
-	@echo "... wired.i"
-	@echo "... wired.s"
-	@echo "... wireless.o"
-	@echo "... wireless.i"
-	@echo "... wireless.s"
+	@echo "... Wired"
+	@echo "... Wireless"
+	@echo "... Headphones"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

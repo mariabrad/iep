@@ -3,6 +3,12 @@ project(main)               # Create project "simple_example"
 set(CMAKE_CXX_STANDARD 14)            # Enable c++14 standard
 
 
+add_subdirectory( Wired )
+add_subdirectory( Wireless )
+add_subdirectory( Headphones )
 
-# Add executable target with source files listed in SOURCE_FILES variable
-add_executable(main main.cpp headphones.h headphones.cpp wireless.h wired.h wireless.cpp wired.cpp)
+add_executable( main src/main.cpp)
+
+target_link_libraries(main Headphones)
+target_link_libraries(main Wired)
+target_link_libraries(main Wireless)

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWireless.a  CMakeFiles/Wireless.dir/wireless.cpp.o
+/usr/bin/ranlib libWireless.a
