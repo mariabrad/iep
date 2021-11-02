@@ -3,13 +3,13 @@
 #include <cstring>
 #include "headphones.hpp"
 
-class Wired: public Headphones{
 
+class Wired: public Headphones{
     public:
     Wired(std::string n, float p,float s, float freq, float in, int l);
     ~ Wired();
     Wired(const Wired&); 
-    Wired& operator=(const Wired&) = delete; 
+    Wired& operator=(const Wired&); 
     Wired(Wired&&) = delete; 
     Wired& operator=(Wired&&) = delete;
     void show() override;

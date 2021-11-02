@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstring>
-#include "headphones.hpp"
 #include "wired.hpp"
 #include "wireless.hpp"
 
@@ -29,13 +28,13 @@ int main(){
     example_input_power= 20;
     example_range = 10;
 
-    while (1)
-    {
+    while (1){
+
         std::cout<<"1 - Wired | 2 - Wireless | 3 Make copy of Wired | 4 Make copy of Wireless |0 - Quit: ";
         std::cin>>option;
 
-        switch (option)
-        {
+        switch (option){
+            
         case 1:
             std::cout<<"\nEnter wired headphones specifications:\n";
             std::cout<<"\nName: ";
@@ -48,9 +47,9 @@ int main(){
             std::cin>>frequency_response;
             std::cout<<"\nInput power: ";
             std::cin>>input_power;
-             std::cout<<"\nWire length: ";
+            std::cout<<"\nWire length: ";
             std::cin>>wire_length;
-            obj1=  new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
+            obj1= new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
             std::cout<<"\n";
             obj1->show();
             obj3= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
@@ -73,7 +72,7 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            obj2=  new Wireless(example_name, price,sensitivity, frequency_response, input_power, range);
+            obj2= new Wireless(example_name, price,sensitivity, frequency_response, input_power, range);
             obj2->show();
             obj4= new Wireless(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
             obj4->show();
@@ -94,7 +93,7 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            obj1=  new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
+            obj1= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
             Wired* obj5= new Wired(*obj1);
             obj1->setName(example_name);
             obj1->show();
@@ -117,10 +116,12 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            obj2=  new Wireless(name, price,sensitivity, frequency_response, input_power, range);
-            Wireless* obj6= new Wireless(*obj2);
+            obj2= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
+            Wireless* obj6;
+            *obj6=*obj2;
             obj2->setName(example_name);
             obj2->show();
+            obj6->show();
             break;
         }
 

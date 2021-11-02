@@ -1,6 +1,7 @@
 #include "headphones.hpp"
 #include <string.h>
 
+
 Headphones::Headphones(std::string n, float p, float s, float freq, float in){
   name=n;
   price=p;
@@ -10,7 +11,17 @@ Headphones::Headphones(std::string n, float p, float s, float freq, float in){
 }
 
 Headphones::~Headphones(){ 
-    std::cout << "Destruct headphones" << std::endl; 
+  std::cout << "Destruct headphones" << std::endl; 
+}
+
+Headphones& Headphones::operator=(const Headphones& obj){
+  if(this!=&obj){
+    name=obj.name;
+    price=obj.price;
+    sensitivity=obj.sensitivity;
+    frequency_response=obj.frequency_response;
+    input_power=obj.input_power;
+  }
 }
 
 std::string Headphones::getName(){ return name;}
