@@ -98,6 +98,7 @@ int main(){
             Wired* obj5= new Wired(*obj1);
             obj1->setName(example_name);
             obj1->show();
+            obj5->show();
             break;
         }
 
