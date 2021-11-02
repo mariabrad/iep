@@ -22,6 +22,7 @@ Headphones& Headphones::operator=(const Headphones& obj){
     frequency_response=obj.frequency_response;
     input_power=obj.input_power;
   }
+  return *this;
 }
 
 std::string Headphones::getName(){ return name;}

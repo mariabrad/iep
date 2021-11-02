@@ -18,6 +18,8 @@ int main(){
 
     Wired* obj1;
     Wireless *obj2;
+    Wired* obj7;
+    Wireless *obj8;
     Headphones* obj3;
     Headphones* obj4;
 
@@ -30,7 +32,14 @@ int main(){
 
     while (1){
 
-        std::cout<<"1 - Wired | 2 - Wireless | 3 Make copy of Wired | 4 Make copy of Wireless |0 - Quit: ";
+        std::cout<<"1 - Wired - overloading show function\n";
+        std::cout<<"2 - Wireless - overloading show function\n";
+        std::cout<<"3 - Wired - Make copy using copy constructor\n";
+        std::cout<<"4 - Wireless - Make copy using copy constructor\n";
+        std::cout<<"5 - Wired - Make copy using copy operator\n";
+        std::cout<<"6 - Wireless - Make copy using copy operator\n";
+        std::cout<<"0 - Quit\n";
+        std::cout<<"Your option: \n";
         std::cin>>option;
 
         switch (option){
@@ -102,7 +111,7 @@ int main(){
         }
 
         case 4:{
-            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nEnter wireless headphones specifications:\n";
             std::cout<<"\nName: ";
             std::cin>>name;
             std::cout<<"\nPrice: ";
@@ -117,19 +126,67 @@ int main(){
             std::cin>>range;
             std::cout<<"\n";
             obj2= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
-            Wireless* obj6;
-            *obj6=*obj2;
-            obj2->setName(example_name);
+            Wireless* obj6= new Wireless(*obj2);
+            obj2->setRange(example_range);
             obj2->show();
             obj6->show();
             break;
         }
+
+         case 5:{
+            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nWire length: ";
+            std::cin>>wire_length;
+            std::cout<<"\n";
+            obj7= new Wired(name, price,sensitivity, frequency_response, input_power,wire_length);
+            Wired* obj9 = new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            *obj9=*obj7;
+            obj7->setName(example_name);
+            obj7->show();
+            obj9->show();
+            break;
+        }   
+
+        case 6:{
+            std::cout<<"\nEnter wireless headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nRange: ";
+            std::cin>>range;
+            std::cout<<"\n";
+            obj8= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
+            Wireless* obj10 = new Wireless(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
+            *obj10=*obj8;
+            obj8->setName(example_name);
+            obj8->show();
+            obj10->show();
+            break;
+        }        
 
         case 0:
             done = true;
             break;
         
         }
+
         if(done) 
         break;
 
@@ -139,32 +196,3 @@ int main(){
 
     return 0;
 }
-
-
-    //headphones* list[2];
-    //list[0] = headphones1;
-    //list[1] = headphones2;
-    //std::cout<<"\n Headphones: ";
-    //std::cout<<" Wired: ";
-    //headphones1.show();
-    //std::cout<<"\n";
-    //std::cout<<" Wirelesschar*
-            /*
-        case 3:
-            int i;
-            for(i=0;i<=ct;i++){
-                std::cout<<"\n Headphones:\n";
-                std::cout<<"\n Name: ";
-                //std::cout<<list[0]->getName();
-                std::cout<<"\n Price: ";
-                std::cout<<price;
-                if(typeid(list[i]) == typeid(Wireless)){
-                    std::cout<<"\n Range: ";
-                    std::cout<<range;               
-                }
-                else{
-                    std::cout<<"\n Wire length: ";
-                    std::cout<<wire_length;      
-                }      
-
-        */
