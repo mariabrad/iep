@@ -11,7 +11,7 @@ Wireless::~Wireless() {
 
 Wireless& Wireless::operator=(const Wireless& obj){
   if(this!=&obj){
-      (Wireless&)(*this)=obj;
+      (Headphones&)(*this)=obj;
       range=obj.range;
   }
   return *this;
