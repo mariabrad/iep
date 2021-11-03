@@ -10,8 +10,6 @@ class Headphones{
     virtual void show()=0;
     Headphones(const Headphones&);
     Headphones& operator=(const Headphones&);
-    Headphones(Headphones&&) = delete; 
-    Headphones& operator=(Headphones&&) = delete;
 
     std::string getName();
     float getPrice();

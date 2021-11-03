@@ -29,7 +29,7 @@ int main(){
     example_frequency_response = 0.2;
     example_input_power= 20;
     example_range = 10;
-
+    
     while (1){
 
         std::cout<<"1 - Wired - overloading show function\n";

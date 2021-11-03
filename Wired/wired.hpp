@@ -10,8 +10,7 @@ class Wired: public Headphones{
     ~ Wired();
     Wired(const Wired&); 
     Wired& operator=(const Wired&); 
-    Wired(Wired&&) = delete; 
-    Wired& operator=(Wired&&) = delete;
+
     void show() override;
     void show(int c);
     int getWireLength();
