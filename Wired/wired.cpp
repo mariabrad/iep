@@ -11,7 +11,7 @@ Wired::~Wired() {
 
 Wired& Wired::operator=(const Wired& obj){
   if(this!=&obj){
-      (Wired&)(*this)= obj;
+      (Headphones&)(*this)= obj;
       wire_length=obj.wire_length;
   }
   return *this;
