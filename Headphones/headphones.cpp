@@ -20,7 +20,7 @@ Headphones::Headphones(const Headphones &obj):
   sensitivity(obj.sensitivity),
   frequency_response(obj.frequency_response),
   input_power(obj.input_power){
-    std::cout<<"The Copy Constructor was used"<<std::endl;
+    
 }
 
 Headphones& Headphones::operator=(const Headphones& obj){

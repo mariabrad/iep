@@ -20,8 +20,8 @@ int main(){
     Wireless *obj2;
     Wired* obj7;
     Wireless *obj8;
-    Headphones* obj3;
-    Headphones* obj4;
+    Wired* obj3;
+    Wireless* obj4;
     Mixed *obj11;
 
     strcpy(example_name, "JABRA");
@@ -39,8 +39,8 @@ int main(){
         std::cout<<"2 - Wireless - show function\n";
         std::cout<<"3 - Wired - Make copy using copy constructor\n";
         std::cout<<"4 - Wireless - Make copy using copy constructor\n";
-        std::cout<<"5 - Wired - Make copy using copy operator\n";
-        std::cout<<"6 - Wireless - Make copy using copy operator\n";
+        std::cout<<"5 - Wired - Make copy using copy assignment operator\n";
+        std::cout<<"6 - Wireless - Make copy using copy assignment operator\n";
         std::cout<<"7 - Mixed - Can't copy\n";
         std::cout<<"0 - Quit\n";
         std::cout<<"Your option: \n";
@@ -84,7 +84,7 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            obj2= new Wireless(example_name, price,sensitivity, frequency_response, input_power, range);
+            obj2= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
             obj2->show();
 
             break;   
@@ -104,10 +104,10 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            obj1= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
-            Wired* obj5= new Wired(*obj1);
-            obj1->setWireLength(example_wire_length);
-            obj1->show();
+            obj3= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
+            Wired* obj5= new Wired(*obj3);
+            obj3->setWireLength(example_wire_length);
+            obj3->show();
             obj5->show();
             break;
         }
@@ -127,10 +127,10 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            obj2= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
-            Wireless* obj6= new Wireless(*obj2);
-            obj2->setRange(example_range);
-            obj2->show();
+            obj4= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
+            Wireless* obj6= new Wireless(*obj4);
+            obj4->setRange(example_range);
+            obj4->show();
             obj6->show();
             break;
         }
@@ -203,7 +203,7 @@ int main(){
             Mixed* obj12 = new Mixed(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_nr);
             
             //Mixed* obj13= new Mixed(*obj12); Copy constructor
-            //*obj12=*obj11; Copy operator
+            //*obj12=*obj11; Copy assignment operator
 
             break;
         } 
