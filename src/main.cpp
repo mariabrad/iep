@@ -35,8 +35,8 @@ int main(){
     
     while (1){
 
-        std::cout<<"1 - Wired - overloading show function\n";
-        std::cout<<"2 - Wireless - overloading show function\n";
+        std::cout<<"1 - Wired - show function\n";
+        std::cout<<"2 - Wireless - show function\n";
         std::cout<<"3 - Wired - Make copy using copy constructor\n";
         std::cout<<"4 - Wireless - Make copy using copy constructor\n";
         std::cout<<"5 - Wired - Make copy using copy operator\n";
@@ -65,8 +65,7 @@ int main(){
             obj1= new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
             std::cout<<"\n";
             obj1->show();
-            obj3= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
-            obj3->show();
+
    
             break;
 
@@ -87,8 +86,7 @@ int main(){
             std::cout<<"\n";
             obj2= new Wireless(example_name, price,sensitivity, frequency_response, input_power, range);
             obj2->show();
-            obj4= new Wireless(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
-            obj4->show();
+
             break;   
 
         case 3:{
