@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Headphones/headphones.hpp
+iostream
+-
+cstring
+-
+
+/home/maria/IEP/rep/Mixed/mixed.cpp
+mixed.hpp
+/home/maria/IEP/rep/Mixed/mixed.hpp
+
+/home/maria/IEP/rep/Mixed/mixed.hpp
+iostream
+-
+cstring
+-
+headphones.hpp
+/home/maria/IEP/rep/Mixed/headphones.hpp
+

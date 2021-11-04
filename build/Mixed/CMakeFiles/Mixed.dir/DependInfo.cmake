@@ -4,24 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/maria/IEP/rep/src/main.cpp" "/home/maria/IEP/rep/build/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/maria/IEP/rep/Mixed/mixed.cpp" "/home/maria/IEP/rep/build/Mixed/CMakeFiles/Mixed.dir/mixed.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../Headphones"
-  "../Wired"
-  "../Wireless"
   "../Mixed"
+  "../Headphones"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/maria/IEP/rep/build/Headphones/CMakeFiles/Headphones.dir/DependInfo.cmake"
-  "/home/maria/IEP/rep/build/Wired/CMakeFiles/Wired.dir/DependInfo.cmake"
-  "/home/maria/IEP/rep/build/Wireless/CMakeFiles/Wireless.dir/DependInfo.cmake"
-  "/home/maria/IEP/rep/build/Mixed/CMakeFiles/Mixed.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

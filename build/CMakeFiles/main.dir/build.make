@@ -82,6 +82,7 @@ main: CMakeFiles/main.dir/build.make
 main: Headphones/libHeadphones.a
 main: Wired/libWired.a
 main: Wireless/libWireless.a
+main: Mixed/libMixed.a
 main: Headphones/libHeadphones.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maria/IEP/rep/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"

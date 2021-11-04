@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMixed.a  CMakeFiles/Mixed.dir/mixed.cpp.o
+/usr/bin/ranlib libMixed.a

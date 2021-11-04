@@ -14,6 +14,15 @@ Headphones::~Headphones(){
   std::cout << "Destruct headphones" << std::endl; 
 }
 
+Headphones::Headphones(const Headphones &obj):
+  name(obj.name),
+  price(obj.price),
+  sensitivity(obj.sensitivity),
+  frequency_response(obj.frequency_response),
+  input_power(obj.input_power){
+    std::cout<<"The Copy Constructor was used"<<std::endl;
+}
+
 Headphones& Headphones::operator=(const Headphones& obj){
   if(this!=&obj){
     name=obj.name;

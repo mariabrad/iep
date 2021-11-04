@@ -10,3 +10,6 @@
 /home/maria/IEP/rep/build/Headphones/CMakeFiles/rebuild_cache.dir
 /home/maria/IEP/rep/build/Headphones/CMakeFiles/edit_cache.dir
 /home/maria/IEP/rep/build/Headphones/CMakeFiles/Headphones.dir
+/home/maria/IEP/rep/build/Mixed/CMakeFiles/rebuild_cache.dir
+/home/maria/IEP/rep/build/Mixed/CMakeFiles/edit_cache.dir
+/home/maria/IEP/rep/build/Mixed/CMakeFiles/Mixed.dir

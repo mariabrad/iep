@@ -30,6 +30,6 @@ int Wireless::getRange(){ return range;}
 
 void Wireless::setRange(const float&  w){ range=w;}
 
-Wireless::Wireless(const Wireless &obj): Headphones(obj), range(obj.range){
+Wireless::Wireless(const Wireless &obj): Headphones(obj.name, obj.price,obj.sensitivity, obj.frequency_response, obj.input_power), range(obj.range){
     std::cout<<"The Copy Constructor was used"<<std::endl;
 }

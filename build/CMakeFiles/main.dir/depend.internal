@@ -3,6 +3,7 @@
 
 CMakeFiles/main.dir/src/main.cpp.o
  ../Headphones/headphones.hpp
+ ../Mixed/mixed.hpp
  ../Wired/wired.hpp
  ../Wireless/wireless.hpp
  /home/maria/IEP/rep/src/main.cpp

@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
   "../Headphones/CMakeLists.txt"
+  "../Mixed/CMakeLists.txt"
   "../Wired/CMakeLists.txt"
   "../Wireless/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
@@ -47,6 +48,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Wired/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Wireless/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Headphones/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Mixed/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -55,4 +57,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "Wired/CMakeFiles/Wired.dir/DependInfo.cmake"
   "Wireless/CMakeFiles/Wireless.dir/DependInfo.cmake"
   "Headphones/CMakeFiles/Headphones.dir/DependInfo.cmake"
+  "Mixed/CMakeFiles/Mixed.dir/DependInfo.cmake"
   )

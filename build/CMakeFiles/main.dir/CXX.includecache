@@ -12,6 +12,14 @@ iostream
 cstring
 -
 
+../Mixed/mixed.hpp
+iostream
+-
+cstring
+-
+headphones.hpp
+../Mixed/headphones.hpp
+
 ../Wired/wired.hpp
 iostream
 -
@@ -37,4 +45,6 @@ wired.hpp
 /home/maria/IEP/rep/src/wired.hpp
 wireless.hpp
 /home/maria/IEP/rep/src/wireless.hpp
+mixed.hpp
+/home/maria/IEP/rep/src/mixed.hpp
 

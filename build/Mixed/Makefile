@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles /home/maria/IEP/rep/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles /home/maria/IEP/rep/build/Mixed/CMakeFiles/progress.marks
+	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,110 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+Mixed/CMakeFiles/Mixed.dir/rule:
+	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/CMakeFiles/Mixed.dir/rule
+.PHONY : Mixed/CMakeFiles/Mixed.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+Mixed: Mixed/CMakeFiles/Mixed.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named Wired
-
-# Build rule for target.
-Wired: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Wired
-.PHONY : Wired
-
-# fast build rule for target.
-Wired/fast:
-	$(MAKE) -f Wired/CMakeFiles/Wired.dir/build.make Wired/CMakeFiles/Wired.dir/build
-.PHONY : Wired/fast
-
-#=============================================================================
-# Target rules for targets named Wireless
-
-# Build rule for target.
-Wireless: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Wireless
-.PHONY : Wireless
-
-# fast build rule for target.
-Wireless/fast:
-	$(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/build
-.PHONY : Wireless/fast
-
-#=============================================================================
-# Target rules for targets named Headphones
-
-# Build rule for target.
-Headphones: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Headphones
-.PHONY : Headphones
-
-# fast build rule for target.
-Headphones/fast:
-	$(MAKE) -f Headphones/CMakeFiles/Headphones.dir/build.make Headphones/CMakeFiles/Headphones.dir/build
-.PHONY : Headphones/fast
-
-#=============================================================================
-# Target rules for targets named Mixed
-
-# Build rule for target.
-Mixed: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Mixed
 .PHONY : Mixed
 
 # fast build rule for target.
 Mixed/fast:
-	$(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
+	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
 .PHONY : Mixed/fast
 
-src/main.o: src/main.cpp.o
+mixed.o: mixed.cpp.o
 
-.PHONY : src/main.o
+.PHONY : mixed.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+mixed.cpp.o:
+	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.o
+.PHONY : mixed.cpp.o
 
-src/main.i: src/main.cpp.i
+mixed.i: mixed.cpp.i
 
-.PHONY : src/main.i
+.PHONY : mixed.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+mixed.cpp.i:
+	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.i
+.PHONY : mixed.cpp.i
 
-src/main.s: src/main.cpp.s
+mixed.s: mixed.cpp.s
 
-.PHONY : src/main.s
+.PHONY : mixed.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+mixed.cpp.s:
+	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.s
+.PHONY : mixed.cpp.s
 
 # Help Target
 help:
@@ -210,14 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... Wired"
-	@echo "... Wireless"
-	@echo "... Headphones"
 	@echo "... Mixed"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... mixed.o"
+	@echo "... mixed.i"
+	@echo "... mixed.s"
 .PHONY : help
 
 
@@ -229,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
