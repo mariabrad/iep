@@ -22,6 +22,8 @@ int main(){
     Wireless *obj8;
     Wired* obj3;
     Wireless* obj4;
+    Wired* obj14;
+    Wireless* obj15;
     Mixed *obj11;
 
     strcpy(example_name, "JABRA");
@@ -207,6 +209,50 @@ int main(){
 
             break;
         } 
+         case 8:{
+            std::cout<<"\nEnter wireless headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nRange: ";
+            std::cin>>range;
+            std::cout<<"\n";
+            Wireless wireless_temp(name, price,sensitivity, frequency_response, input_power, range);
+            obj15=&wireless_temp;
+            Wireless* obj13 = &wireless_temp;
+            *obj15=*obj13;
+            break;
+        }     
+         case 9:{
+            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nWire length: ";
+            std::cin>>wire_length;
+            std::cout<<"\n";
+            Wired wired_temp(name, price,sensitivity, frequency_response, input_power, wire_length);
+            obj14=&wired_temp;
+            Wired* obj16 = &wired_temp;
+            *obj14=*obj16;
+            break;
+        }   
+  
+
 
         case 0:
             done = true;

@@ -5,7 +5,7 @@ Mixed::Mixed(char * n, float p, float s, float freq, float in, int nr): Headphon
 }
 
 Mixed::~Mixed() { 
-    std::cout << "Destruct headphones" << std::endl;
+   
 }
 
 void Mixed::show(){

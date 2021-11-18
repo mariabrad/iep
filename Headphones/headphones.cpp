@@ -11,7 +11,7 @@ Headphones::Headphones(std::string n, float p, float s, float freq, float in):
 {}
 
 Headphones::~Headphones(){ 
-  std::cout << "Destruct headphones" << std::endl; 
+ 
 }
 
 Headphones::Headphones(const Headphones &obj):
@@ -30,6 +30,9 @@ Headphones& Headphones::operator=(const Headphones& obj){
     sensitivity=obj.sensitivity;
     frequency_response=obj.frequency_response;
     input_power=obj.input_power;
+  }
+  else{
+    std::cout<<"\nSelf assessment\n";
   }
   return *this;
 }

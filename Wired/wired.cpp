@@ -5,13 +5,15 @@ Wired::Wired(std::string n, float p,float s, float freq, float in, int l): Headp
 }
 
 Wired::~Wired() { 
-    std::cout << "Destruct headphones" << std::endl;
 }
 
 Wired& Wired::operator=(const Wired& obj){
   if(this!=&obj){
-      (Headphones&)(*this)= obj;
+      Headphones::operator= (obj);
       wire_length=obj.wire_length;
+  }
+  else{
+      std::cout<<"\nSelf assessment\n";
   }
   return *this;
 }
