@@ -44,6 +44,8 @@ int main(){
         std::cout<<"5 - Wired - Make copy using copy assignment operator\n";
         std::cout<<"6 - Wireless - Make copy using copy assignment operator\n";
         std::cout<<"7 - Mixed - Can't copy\n";
+        std::cout<<"8 - Wired - Make copy using copy assignment - self assessment\n";
+        std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assessment\n";
         std::cout<<"0 - Quit\n";
         std::cout<<"Your option: \n";
         std::cin>>option;
