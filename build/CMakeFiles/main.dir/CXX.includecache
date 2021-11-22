@@ -36,15 +36,15 @@ cstring
 headphones.hpp
 ../Wireless/headphones.hpp
 
-/home/maria/IEP/rep/src/main.cpp
+/home/maria/iep/src/main.cpp
 iostream
 -
 cstring
 -
 wired.hpp
-/home/maria/IEP/rep/src/wired.hpp
+/home/maria/iep/src/wired.hpp
 wireless.hpp
-/home/maria/IEP/rep/src/wireless.hpp
+/home/maria/iep/src/wireless.hpp
 mixed.hpp
-/home/maria/IEP/rep/src/mixed.hpp
+/home/maria/iep/src/mixed.hpp
 

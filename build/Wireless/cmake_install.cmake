@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/IEP/rep/Wireless
+# Install script for directory: /home/maria/iep/Wireless
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

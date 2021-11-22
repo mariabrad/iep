@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/IEP/rep/Headphones
+# Install script for directory: /home/maria/iep/Headphones
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

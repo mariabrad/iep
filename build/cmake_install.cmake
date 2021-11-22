@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/IEP/rep
+# Install script for directory: /home/maria/iep
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,22 +39,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/IEP/rep/build/Wired/cmake_install.cmake")
+  include("/home/maria/iep/build/Wired/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/IEP/rep/build/Wireless/cmake_install.cmake")
+  include("/home/maria/iep/build/Wireless/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/IEP/rep/build/Headphones/cmake_install.cmake")
+  include("/home/maria/iep/build/Headphones/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/maria/IEP/rep/build/Mixed/cmake_install.cmake")
+  include("/home/maria/iep/build/Mixed/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/maria/IEP/rep/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/maria/iep/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

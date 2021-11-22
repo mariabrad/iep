@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/maria/IEP/rep/Headphones/headphones.cpp" "/home/maria/IEP/rep/build/Headphones/CMakeFiles/Headphones.dir/headphones.cpp.o"
+  "/home/maria/iep/Headphones/headphones.cpp" "/home/maria/iep/build/Headphones/CMakeFiles/Headphones.dir/headphones.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

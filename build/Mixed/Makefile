@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maria/IEP/rep
+CMAKE_SOURCE_DIR = /home/maria/iep
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maria/IEP/rep/build
+CMAKE_BINARY_DIR = /home/maria/iep/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles /home/maria/IEP/rep/build/Mixed/CMakeFiles/progress.marks
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles 0
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles /home/maria/iep/build/Mixed/CMakeFiles/progress.marks
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/clean
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Mixed/CMakeFiles/Mixed.dir/rule:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/CMakeFiles/Mixed.dir/rule
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Mixed/CMakeFiles/Mixed.dir/rule
 .PHONY : Mixed/CMakeFiles/Mixed.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ Mixed: Mixed/CMakeFiles/Mixed.dir/rule
 
 # fast build rule for target.
 Mixed/fast:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
+	cd /home/maria/iep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
 .PHONY : Mixed/fast
 
 mixed.o: mixed.cpp.o
@@ -131,7 +131,7 @@ mixed.o: mixed.cpp.o
 
 # target to build an object file
 mixed.cpp.o:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.o
+	cd /home/maria/iep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.o
 .PHONY : mixed.cpp.o
 
 mixed.i: mixed.cpp.i
@@ -140,7 +140,7 @@ mixed.i: mixed.cpp.i
 
 # target to preprocess a source file
 mixed.cpp.i:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.i
+	cd /home/maria/iep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.i
 .PHONY : mixed.cpp.i
 
 mixed.s: mixed.cpp.s
@@ -149,7 +149,7 @@ mixed.s: mixed.cpp.s
 
 # target to generate assembly for a file
 mixed.cpp.s:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.s
+	cd /home/maria/iep/build && $(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/mixed.cpp.s
 .PHONY : mixed.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

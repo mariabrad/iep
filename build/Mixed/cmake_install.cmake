@@ -1,4 +1,4 @@
-# Install script for directory: /home/maria/IEP/rep/Mixed
+# Install script for directory: /home/maria/iep/Mixed
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

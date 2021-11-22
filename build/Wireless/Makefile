@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maria/IEP/rep
+CMAKE_SOURCE_DIR = /home/maria/iep
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maria/IEP/rep/build
+CMAKE_BINARY_DIR = /home/maria/iep/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles /home/maria/IEP/rep/build/Wireless/CMakeFiles/progress.marks
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/IEP/rep/build/CMakeFiles 0
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles /home/maria/iep/build/Wireless/CMakeFiles/progress.marks
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/clean
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/preinstall
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/preinstall
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Wireless/CMakeFiles/Wireless.dir/rule:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/CMakeFiles/Wireless.dir/rule
+	cd /home/maria/iep/build && $(MAKE) -f CMakeFiles/Makefile2 Wireless/CMakeFiles/Wireless.dir/rule
 .PHONY : Wireless/CMakeFiles/Wireless.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ Wireless: Wireless/CMakeFiles/Wireless.dir/rule
 
 # fast build rule for target.
 Wireless/fast:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/build
+	cd /home/maria/iep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/build
 .PHONY : Wireless/fast
 
 wireless.o: wireless.cpp.o
@@ -131,7 +131,7 @@ wireless.o: wireless.cpp.o
 
 # target to build an object file
 wireless.cpp.o:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.o
+	cd /home/maria/iep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.o
 .PHONY : wireless.cpp.o
 
 wireless.i: wireless.cpp.i
@@ -140,7 +140,7 @@ wireless.i: wireless.cpp.i
 
 # target to preprocess a source file
 wireless.cpp.i:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.i
+	cd /home/maria/iep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.i
 .PHONY : wireless.cpp.i
 
 wireless.s: wireless.cpp.s
@@ -149,7 +149,7 @@ wireless.s: wireless.cpp.s
 
 # target to generate assembly for a file
 wireless.cpp.s:
-	cd /home/maria/IEP/rep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.s
+	cd /home/maria/iep/build && $(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/wireless.cpp.s
 .PHONY : wireless.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/maria/IEP/rep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/maria/iep/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

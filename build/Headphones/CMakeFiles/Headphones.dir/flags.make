@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/maria/IEP/rep/Headphones 
+CXX_INCLUDES = -I/home/maria/iep/Headphones 
 
