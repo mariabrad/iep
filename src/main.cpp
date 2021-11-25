@@ -35,7 +35,7 @@ int main(){
     example_range = 10;
     example_nr = 3;
     
-    while (1){
+    while(1){
 
         std::cout<<"1 - Wired - show function\n";
         std::cout<<"2 - Wireless - show function\n";
@@ -44,9 +44,12 @@ int main(){
         std::cout<<"5 - Wired - Make copy using copy assignment operator\n";
         std::cout<<"6 - Wireless - Make copy using copy assignment operator\n";
         std::cout<<"7 - Mixed - Can't copy\n";
-        std::cout<<"8 - Wired - Make copy using copy assignment - self assignment\n";
+        std::cout<<"----------------------\n";
+        std::cout<<"8 - Wired - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"10 - Wired - Chain of assignments\n";
+        std::cout<<"11 - Wired - Make copy using copy constructor\n";
+        std::cout<<"12 - Wireless - Make copy using copy constructor\n";
         std::cout<<"0 - Quit\n";
         std::cout<<"Your option: \n";
         std::cin>>option;
@@ -287,6 +290,50 @@ int main(){
 
             break;
         } 
+
+        case 11:{
+            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nWire length: ";
+            std::cin>>wire_length;
+            std::cout<<"\n";
+            obj3= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
+            Wired* obj5= new Wired(*obj3);
+            obj3->show();
+            obj5->show();
+            break;
+        }
+
+        case 12:{
+            std::cout<<"\nEnter wireless headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nRange: ";
+            std::cin>>range;
+            std::cout<<"\n";
+            obj4= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
+            Wireless* obj6= new Wireless(*obj4);
+            obj4->show();
+            obj6->show();
+            break;
+        }
   
 
 
