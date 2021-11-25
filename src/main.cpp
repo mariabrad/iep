@@ -278,10 +278,6 @@ int main(){
             Wired wired_temp(name, price,sensitivity, frequency_response, input_power, wire_length);
             Wired wired1(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
             Wired wired2(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
-            wired2 = (wired1 = wired_temp);
-            wired_temp.show();
-            wired1.show();
-            wired2.show();
 
             wired2 = wired1 = wired_temp;
             wired_temp.show();
