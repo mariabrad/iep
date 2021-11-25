@@ -7,15 +7,15 @@ Wired::Wired(std::string n, float p,float s, float freq, float in, int l): Headp
 Wired::~Wired() { 
 }
 
-Wired& Wired::operator=(const Wired& obj){
+Wired& Wired::operator=(const Wired& obj){ 
   if(this!=&obj){
-      Headphones::operator= (obj);
+      Headphones::operator= (obj); // ITEM 12 - Copy all parts of an object
       wire_length=obj.wire_length;
   }
   else{
-      std::cout<<"\nSelf assessment\n";
+      std::cout<<"\nSelf assignment\n"; // ITEM 11 - Identity test: if a self-assignment, do nothing   
   }
-  return *this;
+  return *this; // ITEM 10 - Have assignment operators return a reference to *this
 }
 
 void Wired::show(){
@@ -32,6 +32,6 @@ int Wired::getWireLength() {return wire_length;}
 
 void Wired::setWireLength(const float&  w) {wire_length=w;}
 
-Wired::Wired(const Wired &obj): Headphones(obj), wire_length(obj.wire_length){
+Wired::Wired(const Wired &obj): Headphones(obj), wire_length(obj.wire_length){ //ITEM - 12 Copy all parts of an object
     std::cout<<"The Copy Constructor was used"<<std::endl;
 }

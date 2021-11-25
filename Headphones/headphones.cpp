@@ -23,7 +23,7 @@ Headphones::Headphones(const Headphones &obj):
     
 }
 
-Headphones& Headphones::operator=(const Headphones& obj){
+Headphones& Headphones::operator=(const Headphones& obj){ //ITEM 12 - Copy all parts of an object
   if(this!=&obj){
     name=obj.name;
     price=obj.price;
@@ -32,9 +32,9 @@ Headphones& Headphones::operator=(const Headphones& obj){
     input_power=obj.input_power;
   }
   else{
-    std::cout<<"\nSelf assessment\n";
+    std::cout<<"\nSelf assignment\n"; // ITEM 11 - Identity test: if a self-assignment, do nothing  
   }
-  return *this;
+  return *this; // ITEM 10 - Have assignment operators return a reference to *this
 }
 
 std::string Headphones::getName(){ return name;}

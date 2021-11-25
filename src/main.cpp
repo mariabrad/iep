@@ -211,6 +211,7 @@ int main(){
 
             break;
         } 
+
          case 8:{
             std::cout<<"\nEnter wireless headphones specifications:\n";
             std::cout<<"\nName: ";
@@ -231,7 +232,8 @@ int main(){
             Wireless* obj13 = &wireless_temp;
             *obj15=*obj13;
             break;
-        }     
+        }
+             
          case 9:{
             std::cout<<"\nEnter wired headphones specifications:\n";
             std::cout<<"\nName: ";
