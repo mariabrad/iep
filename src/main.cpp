@@ -44,8 +44,9 @@ int main(){
         std::cout<<"5 - Wired - Make copy using copy assignment operator\n";
         std::cout<<"6 - Wireless - Make copy using copy assignment operator\n";
         std::cout<<"7 - Mixed - Can't copy\n";
-        std::cout<<"8 - Wired - Make copy using copy assignment - self assessment\n";
-        std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assessment\n";
+        std::cout<<"8 - Wired - Make copy using copy assignment - self assignment\n";
+        std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assignment\n";
+        std::cout<<"10 - Wired - Chain of assignments\n";
         std::cout<<"0 - Quit\n";
         std::cout<<"Your option: \n";
         std::cin>>option;
@@ -233,7 +234,7 @@ int main(){
             *obj15=*obj13;
             break;
         }
-             
+
          case 9:{
             std::cout<<"\nEnter wired headphones specifications:\n";
             std::cout<<"\nName: ";
@@ -254,14 +255,44 @@ int main(){
             Wired* obj16 = &wired_temp;
             *obj14=*obj16;
             break;
-        }   
+        }  
+
+         case 10:{
+            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nWire length: ";
+            std::cin>>wire_length;
+            std::cout<<"\n";
+            Wired wired_temp(name, price,sensitivity, frequency_response, input_power, wire_length);
+            Wired wired1(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            Wired wired2(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            wired2 = (wired1 = wired_temp);
+            wired_temp.show();
+            wired1.show();
+            wired2.show();
+
+            wired2 = wired1 = wired_temp;
+            wired_temp.show();
+            wired1.show();
+            wired2.show();
+
+            break;
+        } 
   
 
 
         case 0:
             done = true;
             break;
-        
         }
 
         if(done) 
