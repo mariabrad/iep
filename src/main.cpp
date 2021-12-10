@@ -340,6 +340,7 @@ int main(){
             std::unique_ptr<Wireless>obj10 = std::make_unique<Wireless>(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
             std::unique_ptr<Wireless> obj4 = std::make_unique<Wireless>(name, price,sensitivity, frequency_response, input_power, range);
             std::unique_ptr<Wireless> obj6 = std::make_unique<Wireless>((Wireless&)*obj4);
+            obj10->show();
             obj4->show();
             obj6->show();
             break;
