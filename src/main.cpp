@@ -3,6 +3,7 @@
 #include "wired.hpp"
 #include "wireless.hpp"
 #include "mixed.hpp"
+#include <memory>
 
 int main(){
     char* name = new char[30];
@@ -20,20 +21,29 @@ int main(){
     Wireless *obj2;
     Wired* obj7;
     Wireless *obj8;
-    Wired* obj3;
+   
     Wireless* obj4;
     Wired* obj14;
     Wireless* obj15;
     Mixed *obj11;
 
-    strcpy(example_name, "JABRA");
+    std::shared_ptr<std::string> example_name = std::make_shared<std::string>("Jabra");
+    std::shared_ptr<float> example_price = std::make_shared<float>(800);
+    std::shared_ptr<float> example_sensitivity = std::make_shared<float>(122);
+    std::shared_ptr<float> example_frequency_response = std::make_shared<float>(0.2);
+    std::shared_ptr<float> example_input_power = std::make_shared<float>(20);
+    std::shared_ptr<int> example_wire_length = std::make_shared<int>(2);
+    std::shared_ptr<int> example_range = std::make_shared<int>(10);
+    std::shared_ptr<int> example_nr = std::make_shared<int>(3);
+
+    /*
     example_price = 800;
     example_sensitivity = 122;
     example_frequency_response = 0.2;
     example_input_power= 20;
     example_wire_length = 2;
     example_range = 10;
-    example_nr = 3;
+    example_nr = 3;*/
     
     while(1){
 
@@ -48,6 +58,7 @@ int main(){
         std::cout<<"8 - Wired - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"10 - Wired - Chain of assignments\n";
+        std::cout<<"----------------------\n";
         std::cout<<"11 - Wired - Make copy using copy constructor\n";
         std::cout<<"12 - Wireless - Make copy using copy constructor\n";
         std::cout<<"0 - Quit\n";
@@ -112,7 +123,7 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            obj3= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
+            Wired* obj3= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
             Wired* obj5= new Wired(*obj3);
             obj3->setWireLength(example_wire_length);
             obj3->show();
@@ -302,8 +313,10 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            obj3= new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
-            Wired* obj5= new Wired(*obj3);
+            std::unique_ptr<Wired> obj9 = std::make_unique<Wired>(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            std::unique_ptr<Wired> obj3 = std::make_unique<Wired>(name, price,sensitivity, frequency_response, input_power, wire_length);
+            std::unique_ptr<Wired> obj5 = std::make_unique<Wired>((Wired&)*obj3);
+            obj9->show();
             obj3->show();
             obj5->show();
             break;
@@ -324,8 +337,9 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            obj4= new Wireless(name, price,sensitivity, frequency_response, input_power, range);
-            Wireless* obj6= new Wireless(*obj4);
+            std::unique_ptr<Wireless>obj10 = std::make_unique<Wireless>(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
+            std::unique_ptr<Wireless> obj4 = std::make_unique<Wireless>(name, price,sensitivity, frequency_response, input_power, range);
+            std::unique_ptr<Wireless> obj6 = std::make_unique<Wireless>((Wireless&)*obj4);
             obj4->show();
             obj6->show();
             break;
