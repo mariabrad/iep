@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.16)  # CMake version check
-project(main)               # Create project 
-set(CMAKE_CXX_STANDARD 14)            # Enable c++14 standard
+cmake_minimum_required(VERSION 3.16)
+project(main)              
+set(CMAKE_CXX_STANDARD 14)            
 
 
 add_subdirectory( Wired )

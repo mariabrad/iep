@@ -5,6 +5,7 @@
 #include "mixed.hpp"
 #include "lock.hpp"
 #include <memory>
+#include <mutex>
 
 int main(){
     char* name = new char[30];
@@ -373,7 +374,10 @@ int main(){
             obj1= new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
             Wired* wired1= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
             Catalogue * cat= new Catalogue("Bose");
+            mutex mut;
+            
             wired1->addToCatalogue(cat);
+            
             obj1->addToCatalogue(cat);
             cat->show();
             std::cout<<"\n";
