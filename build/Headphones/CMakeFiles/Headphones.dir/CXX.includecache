@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../Catalogue/catalogue.hpp
+iostream
+-
+cstring
+-
+
 /home/maria/iep/Headphones/headphones.cpp
 headphones.hpp
 /home/maria/iep/Headphones/headphones.hpp
@@ -17,4 +23,6 @@ iostream
 -
 cstring
 -
+catalogue.hpp
+/home/maria/iep/Headphones/catalogue.hpp
 

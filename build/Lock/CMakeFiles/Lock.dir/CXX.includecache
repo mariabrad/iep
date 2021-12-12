@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/iep/Lock/lock.cpp
+lock.hpp
+/home/maria/iep/Lock/lock.hpp
+
+/home/maria/iep/Lock/lock.hpp
+iostream
+-
+mutex
+-
+memory
+-
+

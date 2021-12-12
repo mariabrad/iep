@@ -1,5 +1,5 @@
 #include "wired.hpp"
-
+#include <memory>
 
 Wired::Wired(std::string n, float p,float s, float freq, float in, int l): Headphones(n,p,s,freq,in),wire_length(l){
 }
@@ -34,4 +34,11 @@ void Wired::setWireLength(const float&  w) {wire_length=w;}
 
 Wired::Wired(const Wired &obj): Headphones(obj), wire_length(obj.wire_length){ //ITEM - 12 Copy all parts of an object
     std::cout<<"The Copy Constructor was used"<<std::endl;
+}
+
+void Wired::addToCatalogue(Catalogue* catalogue){
+    //std::unique_ptr<std::string> c = std::make_unique<std::string>(catalogue->getContent());
+    std::string c =catalogue->getContent();
+    c=c+", "+this->getName();
+    catalogue->setContent(c); 
 }

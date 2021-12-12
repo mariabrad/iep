@@ -13,3 +13,9 @@
 /home/maria/iep/build/Mixed/CMakeFiles/rebuild_cache.dir
 /home/maria/iep/build/Mixed/CMakeFiles/edit_cache.dir
 /home/maria/iep/build/Mixed/CMakeFiles/Mixed.dir
+/home/maria/iep/build/Lock/CMakeFiles/rebuild_cache.dir
+/home/maria/iep/build/Lock/CMakeFiles/edit_cache.dir
+/home/maria/iep/build/Lock/CMakeFiles/Lock.dir
+/home/maria/iep/build/Catalogue/CMakeFiles/rebuild_cache.dir
+/home/maria/iep/build/Catalogue/CMakeFiles/edit_cache.dir
+/home/maria/iep/build/Catalogue/CMakeFiles/Catalogue.dir

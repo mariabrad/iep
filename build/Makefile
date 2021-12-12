@@ -175,6 +175,32 @@ Mixed/fast:
 	$(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
 .PHONY : Mixed/fast
 
+#=============================================================================
+# Target rules for targets named Lock
+
+# Build rule for target.
+Lock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lock
+.PHONY : Lock
+
+# fast build rule for target.
+Lock/fast:
+	$(MAKE) -f Lock/CMakeFiles/Lock.dir/build.make Lock/CMakeFiles/Lock.dir/build
+.PHONY : Lock/fast
+
+#=============================================================================
+# Target rules for targets named Catalogue
+
+# Build rule for target.
+Catalogue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Catalogue
+.PHONY : Catalogue
+
+# fast build rule for target.
+Catalogue/fast:
+	$(MAKE) -f Catalogue/CMakeFiles/Catalogue.dir/build.make Catalogue/CMakeFiles/Catalogue.dir/build
+.PHONY : Catalogue/fast
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -215,6 +241,8 @@ help:
 	@echo "... Wireless"
 	@echo "... Headphones"
 	@echo "... Mixed"
+	@echo "... Lock"
+	@echo "... Catalogue"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

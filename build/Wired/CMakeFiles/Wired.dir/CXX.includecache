@@ -6,15 +6,25 @@
 
 #IncludeRegexTransform: 
 
-../Headphones/headphones.hpp
+../Catalogue/catalogue.hpp
 iostream
 -
 cstring
 -
 
+../Headphones/headphones.hpp
+iostream
+-
+cstring
+-
+catalogue.hpp
+../Headphones/catalogue.hpp
+
 /home/maria/iep/Wired/wired.cpp
 wired.hpp
 /home/maria/iep/Wired/wired.hpp
+memory
+-
 
 /home/maria/iep/Wired/wired.hpp
 iostream

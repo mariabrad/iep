@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCatalogue.a  CMakeFiles/Catalogue.dir/catalogue.cpp.o
+/usr/bin/ranlib libCatalogue.a

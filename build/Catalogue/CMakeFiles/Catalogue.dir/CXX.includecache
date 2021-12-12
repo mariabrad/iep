@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/maria/iep/Catalogue/catalogue.cpp
+iostream
+-
+cstring
+-
+catalogue.hpp
+/home/maria/iep/Catalogue/catalogue.hpp
+
+/home/maria/iep/Catalogue/catalogue.hpp
+iostream
+-
+cstring
+-
+

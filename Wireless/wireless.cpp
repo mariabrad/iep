@@ -1,5 +1,5 @@
 #include "wireless.hpp"
-
+#include <memory>
 
 Wireless::Wireless(char * n, float p, float s, float freq, float in, int r): Headphones(n,p,s,freq,in),range(r){
 }
@@ -34,4 +34,11 @@ void Wireless::setRange(const float&  w){ range=w;}
 
 Wireless::Wireless(const Wireless &obj): Headphones(obj), range(obj.range){ //ITEM - 12 Copy all parts of an object
     std::cout<<"The Copy Constructor was used"<<std::endl;
+}
+
+void Wireless::addToCatalogue(Catalogue* catalogue){
+    //std::unique_ptr<std::string> c = std::make_unique<std::string>(catalogue->getContent());
+    std::string c =catalogue->getContent();
+    c=c+", "+this->getName();
+    catalogue->setContent(c); 
 }

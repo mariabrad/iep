@@ -3,6 +3,7 @@
 #include "wired.hpp"
 #include "wireless.hpp"
 #include "mixed.hpp"
+#include "lock.hpp"
 #include <memory>
 
 int main(){
@@ -26,7 +27,7 @@ int main(){
     Wired* obj14;
     Wireless* obj15;
     Mixed *obj11;
-
+/*
     std::shared_ptr<std::string> example_name = std::make_shared<std::string>("Jabra");
     std::shared_ptr<float> example_price = std::make_shared<float>(800);
     std::shared_ptr<float> example_sensitivity = std::make_shared<float>(122);
@@ -35,15 +36,15 @@ int main(){
     std::shared_ptr<int> example_wire_length = std::make_shared<int>(2);
     std::shared_ptr<int> example_range = std::make_shared<int>(10);
     std::shared_ptr<int> example_nr = std::make_shared<int>(3);
-
-    /*
+*/
+    strcpy(example_name, "Jabra");
     example_price = 800;
     example_sensitivity = 122;
     example_frequency_response = 0.2;
     example_input_power= 20;
     example_wire_length = 2;
     example_range = 10;
-    example_nr = 3;*/
+    example_nr = 3;
     
     while(1){
 
@@ -59,8 +60,9 @@ int main(){
         std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"10 - Wired - Chain of assignments\n";
         std::cout<<"----------------------\n";
-        std::cout<<"11 - Wired - Make copy using copy constructor\n";
-        std::cout<<"12 - Wireless - Make copy using copy constructor\n";
+        std::cout<<"11 - Wired - Unique pointer - Make copy using copy constructor\n";
+        std::cout<<"12 - Wireless - Shared pointer\n";
+        std::cout<<"13 - Wired - Example mutex\n";
         std::cout<<"0 - Quit\n";
         std::cout<<"Your option: \n";
         std::cin>>option;
@@ -313,10 +315,9 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            std::unique_ptr<Wired> obj9 = std::make_unique<Wired>(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
             std::unique_ptr<Wired> obj3 = std::make_unique<Wired>(name, price,sensitivity, frequency_response, input_power, wire_length);
             std::unique_ptr<Wired> obj5 = std::make_unique<Wired>((Wired&)*obj3);
-            obj9->show();
+        
             obj3->show();
             obj5->show();
             break;
@@ -337,17 +338,47 @@ int main(){
             std::cout<<"\nRange: ";
             std::cin>>range;
             std::cout<<"\n";
-            std::unique_ptr<Wireless>obj10 = std::make_unique<Wireless>(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
-            std::unique_ptr<Wireless> obj4 = std::make_unique<Wireless>(name, price,sensitivity, frequency_response, input_power, range);
-            std::unique_ptr<Wireless> obj6 = std::make_unique<Wireless>((Wireless&)*obj4);
-            obj10->show();
-            obj4->show();
-            obj6->show();
+
+            std::shared_ptr<Catalogue> cat = std::make_shared<Catalogue>("Bose");
+
+            Wireless* obj10 = new Wireless(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_range);
+            Wireless* obj4 = new Wireless(name, price,sensitivity, frequency_response, input_power, range);
+
+            obj10->addToCatalogue(cat.get());
+            cat->show();
+
+            shared_ptr<Catalogue> cat2(cat);
+
+            obj4->addToCatalogue(cat2.get());
+            cat2->show();
+            
+            
             break;
         }
-  
 
-
+        case 13:{
+            std::cout<<"\nEnter wired headphones specifications:\n";
+            std::cout<<"\nName: ";
+            std::cin>>name;
+            std::cout<<"\nPrice: ";
+            std::cin>>price;
+            std::cout<<"\nSensitivity: ";
+            std::cin>>sensitivity;
+            std::cout<<"\nFrequency response: ";
+            std::cin>>frequency_response;
+            std::cout<<"\nInput power: ";
+            std::cin>>input_power;
+            std::cout<<"\nWire length: ";
+            std::cin>>wire_length;
+            obj1= new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
+            Wired* wired1= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            Catalogue * cat= new Catalogue("Bose");
+            wired1->addToCatalogue(cat);
+            obj1->addToCatalogue(cat);
+            cat->show();
+            std::cout<<"\n";
+            
+        }
         case 0:
             done = true;
             break;

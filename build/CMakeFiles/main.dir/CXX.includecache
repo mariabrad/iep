@@ -6,10 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../Catalogue/catalogue.hpp
+iostream
+-
+cstring
+-
+
 ../Headphones/headphones.hpp
 iostream
 -
 cstring
+-
+catalogue.hpp
+../Headphones/catalogue.hpp
+
+../Lock/lock.hpp
+iostream
+-
+mutex
+-
+memory
 -
 
 ../Mixed/mixed.hpp
@@ -47,6 +63,8 @@ wireless.hpp
 /home/maria/iep/src/wireless.hpp
 mixed.hpp
 /home/maria/iep/src/mixed.hpp
+lock.hpp
+/home/maria/iep/src/lock.hpp
 memory
 -
 

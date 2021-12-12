@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstring>
-
+#include "catalogue.hpp"
 
 class Headphones{
     public:

@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../Catalogue/CMakeLists.txt"
   "../Headphones/CMakeLists.txt"
+  "../Lock/CMakeLists.txt"
   "../Mixed/CMakeLists.txt"
   "../Wired/CMakeLists.txt"
   "../Wireless/CMakeLists.txt"
@@ -49,6 +51,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Wireless/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Headphones/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Mixed/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Lock/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Catalogue/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -58,4 +62,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "Wireless/CMakeFiles/Wireless.dir/DependInfo.cmake"
   "Headphones/CMakeFiles/Headphones.dir/DependInfo.cmake"
   "Mixed/CMakeFiles/Mixed.dir/DependInfo.cmake"
+  "Lock/CMakeFiles/Lock.dir/DependInfo.cmake"
+  "Catalogue/CMakeFiles/Catalogue.dir/DependInfo.cmake"
   )

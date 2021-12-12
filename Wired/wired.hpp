@@ -13,6 +13,7 @@ class Wired: public Headphones{
 
     void show() override;
     void show(int c);
+    void addToCatalogue(Catalogue* c);
     int getWireLength();
     void setWireLength(const float&  w);
     private:

@@ -12,10 +12,9 @@ class Wireless: public Headphones{
     Wireless& operator=(const Wireless&); 
     
     void show() override;
+    void addToCatalogue(Catalogue* catalogue);
     int getRange();
     void setRange(const float&  w);
     private:
         int range;
-
 };
-

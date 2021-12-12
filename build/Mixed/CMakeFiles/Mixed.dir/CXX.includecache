@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+../Catalogue/catalogue.hpp
+iostream
+-
+cstring
+-
+
 ../Headphones/headphones.hpp
 iostream
 -
 cstring
 -
+catalogue.hpp
+../Headphones/catalogue.hpp
 
 /home/maria/iep/Mixed/mixed.cpp
 mixed.hpp
