@@ -60,6 +60,7 @@ all: Headphones/all
 all: Mixed/all
 all: Lock/all
 all: Catalogue/all
+all: Customer/all
 
 .PHONY : all
 
@@ -70,6 +71,7 @@ preinstall: Headphones/preinstall
 preinstall: Mixed/preinstall
 preinstall: Lock/preinstall
 preinstall: Catalogue/preinstall
+preinstall: Customer/preinstall
 
 .PHONY : preinstall
 
@@ -81,6 +83,7 @@ clean: Headphones/clean
 clean: Mixed/clean
 clean: Lock/clean
 clean: Catalogue/clean
+clean: Customer/clean
 
 .PHONY : clean
 
@@ -101,6 +104,24 @@ Catalogue/preinstall:
 Catalogue/clean: Catalogue/CMakeFiles/Catalogue.dir/clean
 
 .PHONY : Catalogue/clean
+
+#=============================================================================
+# Directory level rules for directory Customer
+
+# Recursive "all" directory target.
+Customer/all: Customer/CMakeFiles/Customer.dir/all
+
+.PHONY : Customer/all
+
+# Recursive "preinstall" directory target.
+Customer/preinstall:
+
+.PHONY : Customer/preinstall
+
+# Recursive "clean" directory target.
+Customer/clean: Customer/CMakeFiles/Customer.dir/clean
+
+.PHONY : Customer/clean
 
 #=============================================================================
 # Directory level rules for directory Headphones
@@ -201,14 +222,15 @@ CMakeFiles/main.dir/all: Wireless/CMakeFiles/Wireless.dir/all
 CMakeFiles/main.dir/all: Headphones/CMakeFiles/Headphones.dir/all
 CMakeFiles/main.dir/all: Mixed/CMakeFiles/Mixed.dir/all
 CMakeFiles/main.dir/all: Lock/CMakeFiles/Lock.dir/all
+CMakeFiles/main.dir/all: Customer/CMakeFiles/Customer.dir/all
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=13,14 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=15,16 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -230,7 +252,7 @@ CMakeFiles/main.dir/clean:
 Wired/CMakeFiles/Wired.dir/all: Headphones/CMakeFiles/Headphones.dir/all
 	$(MAKE) -f Wired/CMakeFiles/Wired.dir/build.make Wired/CMakeFiles/Wired.dir/depend
 	$(MAKE) -f Wired/CMakeFiles/Wired.dir/build.make Wired/CMakeFiles/Wired.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=9,10 "Built target Wired"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=11,12 "Built target Wired"
 .PHONY : Wired/CMakeFiles/Wired.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +279,7 @@ Wired/CMakeFiles/Wired.dir/clean:
 Wireless/CMakeFiles/Wireless.dir/all: Headphones/CMakeFiles/Headphones.dir/all
 	$(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/depend
 	$(MAKE) -f Wireless/CMakeFiles/Wireless.dir/build.make Wireless/CMakeFiles/Wireless.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=11,12 "Built target Wireless"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=13,14 "Built target Wireless"
 .PHONY : Wireless/CMakeFiles/Wireless.dir/all
 
 # Build rule for subdir invocation for target.
@@ -284,7 +306,7 @@ Wireless/CMakeFiles/Wireless.dir/clean:
 Headphones/CMakeFiles/Headphones.dir/all: Catalogue/CMakeFiles/Catalogue.dir/all
 	$(MAKE) -f Headphones/CMakeFiles/Headphones.dir/build.make Headphones/CMakeFiles/Headphones.dir/depend
 	$(MAKE) -f Headphones/CMakeFiles/Headphones.dir/build.make Headphones/CMakeFiles/Headphones.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=3,4 "Built target Headphones"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=5,6 "Built target Headphones"
 .PHONY : Headphones/CMakeFiles/Headphones.dir/all
 
 # Build rule for subdir invocation for target.
@@ -311,7 +333,7 @@ Headphones/CMakeFiles/Headphones.dir/clean:
 Mixed/CMakeFiles/Mixed.dir/all: Headphones/CMakeFiles/Headphones.dir/all
 	$(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/depend
 	$(MAKE) -f Mixed/CMakeFiles/Mixed.dir/build.make Mixed/CMakeFiles/Mixed.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=7,8 "Built target Mixed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=9,10 "Built target Mixed"
 .PHONY : Mixed/CMakeFiles/Mixed.dir/all
 
 # Build rule for subdir invocation for target.
@@ -338,7 +360,7 @@ Mixed/CMakeFiles/Mixed.dir/clean:
 Lock/CMakeFiles/Lock.dir/all:
 	$(MAKE) -f Lock/CMakeFiles/Lock.dir/build.make Lock/CMakeFiles/Lock.dir/depend
 	$(MAKE) -f Lock/CMakeFiles/Lock.dir/build.make Lock/CMakeFiles/Lock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=5,6 "Built target Lock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=7,8 "Built target Lock"
 .PHONY : Lock/CMakeFiles/Lock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -384,6 +406,33 @@ Catalogue: Catalogue/CMakeFiles/Catalogue.dir/rule
 Catalogue/CMakeFiles/Catalogue.dir/clean:
 	$(MAKE) -f Catalogue/CMakeFiles/Catalogue.dir/build.make Catalogue/CMakeFiles/Catalogue.dir/clean
 .PHONY : Catalogue/CMakeFiles/Catalogue.dir/clean
+
+#=============================================================================
+# Target rules for target Customer/CMakeFiles/Customer.dir
+
+# All Build rule for target.
+Customer/CMakeFiles/Customer.dir/all: Headphones/CMakeFiles/Headphones.dir/all
+	$(MAKE) -f Customer/CMakeFiles/Customer.dir/build.make Customer/CMakeFiles/Customer.dir/depend
+	$(MAKE) -f Customer/CMakeFiles/Customer.dir/build.make Customer/CMakeFiles/Customer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maria/iep/build/CMakeFiles --progress-num=3,4 "Built target Customer"
+.PHONY : Customer/CMakeFiles/Customer.dir/all
+
+# Build rule for subdir invocation for target.
+Customer/CMakeFiles/Customer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 Customer/CMakeFiles/Customer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maria/iep/build/CMakeFiles 0
+.PHONY : Customer/CMakeFiles/Customer.dir/rule
+
+# Convenience name for target.
+Customer: Customer/CMakeFiles/Customer.dir/rule
+
+.PHONY : Customer
+
+# clean rule for target.
+Customer/CMakeFiles/Customer.dir/clean:
+	$(MAKE) -f Customer/CMakeFiles/Customer.dir/build.make Customer/CMakeFiles/Customer.dir/clean
+.PHONY : Customer/CMakeFiles/Customer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

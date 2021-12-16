@@ -201,6 +201,19 @@ Catalogue/fast:
 	$(MAKE) -f Catalogue/CMakeFiles/Catalogue.dir/build.make Catalogue/CMakeFiles/Catalogue.dir/build
 .PHONY : Catalogue/fast
 
+#=============================================================================
+# Target rules for targets named Customer
+
+# Build rule for target.
+Customer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Customer
+.PHONY : Customer
+
+# fast build rule for target.
+Customer/fast:
+	$(MAKE) -f Customer/CMakeFiles/Customer.dir/build.make Customer/CMakeFiles/Customer.dir/build
+.PHONY : Customer/fast
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -243,6 +256,7 @@ help:
 	@echo "... Mixed"
 	@echo "... Lock"
 	@echo "... Catalogue"
+	@echo "... Customer"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

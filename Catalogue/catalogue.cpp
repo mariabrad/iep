@@ -15,14 +15,14 @@ Catalogue::Catalogue(const Catalogue &obj):
   content(obj.content){
 }
 
-Catalogue& Catalogue::operator=(const Catalogue& obj){ //ITEM 12 - Copy all parts of an object
+Catalogue& Catalogue::operator=(const Catalogue& obj){
   if(this!=&obj){
     content=obj.content;
   }
   else{
-    std::cout<<"\nSelf assignment\n"; // ITEM 11 - Identity test: if a self-assignment, do nothing  
+    std::cout<<"\nSelf assignment\n"; 
   }
-  return *this; // ITEM 10 - Have assignment operators return a reference to *this
+  return *this;
   
 }
 

@@ -67,6 +67,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/maria/iep/build/Catalogue/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/maria/iep/build/Customer/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

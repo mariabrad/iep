@@ -4,18 +4,13 @@
 
 using namespace std;
 
-class Lock 
+class Lock
 {
 public:
-    explicit Lock(mutex *pm)
-        : mutexPtr(pm)
-    {
-        //lock(mutexPtr);
-    } // acquire resource
-
-    ~Lock() { //unlock(mutexPtr); 
-    } // release resource
+    explicit Lock(mutex *pm);
 
 private:
-    mutex *mutexPtr;
+    shared_ptr<mutex> pMutex;
 };
+
+void unlock(mutex *pm);

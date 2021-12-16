@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCustomer.a  CMakeFiles/Customer.dir/customer.cpp.o
+/usr/bin/ranlib libCustomer.a

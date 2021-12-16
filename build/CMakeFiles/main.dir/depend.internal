@@ -3,6 +3,7 @@
 
 CMakeFiles/main.dir/src/main.cpp.o
  ../Catalogue/catalogue.hpp
+ ../Customer/customer.hpp
  ../Headphones/headphones.hpp
  ../Lock/lock.hpp
  ../Mixed/mixed.hpp

@@ -19,3 +19,6 @@
 /home/maria/iep/build/Catalogue/CMakeFiles/rebuild_cache.dir
 /home/maria/iep/build/Catalogue/CMakeFiles/edit_cache.dir
 /home/maria/iep/build/Catalogue/CMakeFiles/Catalogue.dir
+/home/maria/iep/build/Customer/CMakeFiles/rebuild_cache.dir
+/home/maria/iep/build/Customer/CMakeFiles/edit_cache.dir
+/home/maria/iep/build/Customer/CMakeFiles/Customer.dir

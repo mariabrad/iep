@@ -85,7 +85,9 @@ main: Wireless/libWireless.a
 main: Mixed/libMixed.a
 main: Lock/libLock.a
 main: Catalogue/libCatalogue.a
+main: Customer/libCustomer.a
 main: Headphones/libHeadphones.a
+main: Catalogue/libCatalogue.a
 main: Headphones/libHeadphones.a
 main: Catalogue/libCatalogue.a
 main: CMakeFiles/main.dir/link.txt

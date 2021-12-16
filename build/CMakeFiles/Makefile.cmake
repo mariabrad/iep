@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
   "../Catalogue/CMakeLists.txt"
+  "../Customer/CMakeLists.txt"
   "../Headphones/CMakeLists.txt"
   "../Lock/CMakeLists.txt"
   "../Mixed/CMakeLists.txt"
@@ -53,6 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Mixed/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Lock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Catalogue/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Customer/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -64,4 +66,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "Mixed/CMakeFiles/Mixed.dir/DependInfo.cmake"
   "Lock/CMakeFiles/Lock.dir/DependInfo.cmake"
   "Catalogue/CMakeFiles/Catalogue.dir/DependInfo.cmake"
+  "Customer/CMakeFiles/Customer.dir/DependInfo.cmake"
   )

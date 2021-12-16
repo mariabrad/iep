@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/main.dir/src/main.cpp.o  -o main  Headphones/libHeadphones.a Wired/libWired.a Wireless/libWireless.a Mixed/libMixed.a Lock/libLock.a Catalogue/libCatalogue.a Headphones/libHeadphones.a Headphones/libHeadphones.a Catalogue/libCatalogue.a 
+/usr/bin/c++     CMakeFiles/main.dir/src/main.cpp.o  -o main  Headphones/libHeadphones.a Wired/libWired.a Wireless/libWireless.a Mixed/libMixed.a Lock/libLock.a Catalogue/libCatalogue.a Customer/libCustomer.a Headphones/libHeadphones.a Catalogue/libCatalogue.a Headphones/libHeadphones.a Catalogue/libCatalogue.a 

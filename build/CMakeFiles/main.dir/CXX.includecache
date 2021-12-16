@@ -12,6 +12,14 @@ iostream
 cstring
 -
 
+../Customer/customer.hpp
+iostream
+-
+cstring
+-
+headphones.hpp
+../Customer/headphones.hpp
+
 ../Headphones/headphones.hpp
 iostream
 -
@@ -65,6 +73,10 @@ mixed.hpp
 /home/maria/iep/src/mixed.hpp
 lock.hpp
 /home/maria/iep/src/lock.hpp
+customer.hpp
+/home/maria/iep/src/customer.hpp
 memory
+-
+mutex
 -
 

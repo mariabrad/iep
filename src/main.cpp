@@ -4,6 +4,7 @@
 #include "wireless.hpp"
 #include "mixed.hpp"
 #include "lock.hpp"
+#include "customer.hpp"
 #include <memory>
 #include <mutex>
 
@@ -28,16 +29,7 @@ int main(){
     Wired* obj14;
     Wireless* obj15;
     Mixed *obj11;
-/*
-    std::shared_ptr<std::string> example_name = std::make_shared<std::string>("Jabra");
-    std::shared_ptr<float> example_price = std::make_shared<float>(800);
-    std::shared_ptr<float> example_sensitivity = std::make_shared<float>(122);
-    std::shared_ptr<float> example_frequency_response = std::make_shared<float>(0.2);
-    std::shared_ptr<float> example_input_power = std::make_shared<float>(20);
-    std::shared_ptr<int> example_wire_length = std::make_shared<int>(2);
-    std::shared_ptr<int> example_range = std::make_shared<int>(10);
-    std::shared_ptr<int> example_nr = std::make_shared<int>(3);
-*/
+
     strcpy(example_name, "Jabra");
     example_price = 800;
     example_sensitivity = 122;
@@ -61,7 +53,7 @@ int main(){
         std::cout<<"9 - Wireless - Make copy using copy assignment operator - self assignment\n";
         std::cout<<"10 - Wired - Chain of assignments\n";
         std::cout<<"----------------------\n";
-        std::cout<<"11 - Wired - Unique pointer - Make copy using copy constructor\n";
+        std::cout<<"11 - Wired - Unique pointer\n";
         std::cout<<"12 - Wireless - Shared pointer\n";
         std::cout<<"13 - Wired - Example mutex\n";
         std::cout<<"0 - Quit\n";
@@ -316,11 +308,14 @@ int main(){
             std::cout<<"\nWire length: ";
             std::cin>>wire_length;
             std::cout<<"\n";
-            std::unique_ptr<Wired> obj3 = std::make_unique<Wired>(name, price,sensitivity, frequency_response, input_power, wire_length);
-            std::unique_ptr<Wired> obj5 = std::make_unique<Wired>((Wired&)*obj3);
-        
-            obj3->show();
-            obj5->show();
+            Wired* obj3 = new Wired(name, price,sensitivity, frequency_response, input_power, wire_length);
+            Wired* wired1= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
+            Customer* cust= new Customer("Maria");
+            Customer* cust1= new Customer("Cristina");
+            cust->buy(obj3);
+            std::cout<<"\n";
+            cust->sold(wired1,cust1);
+            std::cout<<"\n";
             break;
         }
 
@@ -375,9 +370,9 @@ int main(){
             Wired* wired1= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
             Catalogue * cat= new Catalogue("Bose");
             mutex mut;
-            
+            mut.lock();
             wired1->addToCatalogue(cat);
-            
+            mut.unlock();
             obj1->addToCatalogue(cat);
             cat->show();
             std::cout<<"\n";

@@ -37,7 +37,7 @@ Wireless::Wireless(const Wireless &obj): Headphones(obj), range(obj.range){ //IT
 }
 
 void Wireless::addToCatalogue(Catalogue* catalogue){
-    //std::unique_ptr<std::string> c = std::make_unique<std::string>(catalogue->getContent());
+  
     std::string c =catalogue->getContent();
     c=c+", "+this->getName();
     catalogue->setContent(c); 

@@ -11,7 +11,7 @@ Headphones::Headphones(std::string n, float p, float s, float freq, float in):
 {}
 
 Headphones::~Headphones(){ 
- 
+  std::cout<<"\nDestructor\n";
 }
 
 Headphones::Headphones(const Headphones &obj):
