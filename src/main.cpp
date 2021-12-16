@@ -354,20 +354,20 @@ int main(){
         }
 
         case 13:{
-            std::thread t1(listening);
-            std::thread t11(finishing);
-            std::thread t2(listening);
-            std::thread t22(finishing);
-            std::thread t3(listening);
-            std::thread t33(finishing);
+            std::thread customer1l(listening);
+            std::thread customer1f(finishing);
+            std::thread customer2l(listening);
+            std::thread customer2f(finishing);
+            std::thread customer3l(listening);
+            std::thread customer3f(finishing);
 
 
-            t1.join();
-            t11.join();
-            t2.join();
-            t22.join();
-            t3.join();
-            t33.join();
+            customer1l.join();
+            customer1f.join();
+            customer2l.join();
+            customer2f.join();
+            customer3l.join();
+            customer3f.join();
 
             
         }
