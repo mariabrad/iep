@@ -1,15 +1,27 @@
 #include "lock.hpp"
+#include<mutex>
 
-Lock::Lock(mutex *pm)
-{
-    pm->lock();
+std::mutex m;
+int ct;
 
-    cout << "Lock" << endl;
+Lock::Lock(){
+    m.lock();
+    std::cout<<"Constructor is called"<<std::endl;
 }
 
-void unlock(mutex *pm)
-{
-    pm->unlock();
+Lock::~Lock(){
+    m.unlock();
+    std::cout<<"Destructor is called"<<std::endl;
+}
 
-    cout << "Unlock" << endl;
+
+void listening(){
+    Lock lock;
+    ct++;
+    std::cout<<"Customer number "<<ct<< "is listening\n";
+}
+
+void finishing(){
+    Lock lock;
+    std::cout<<"Next customer"<<std::endl;
 }

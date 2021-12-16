@@ -2,15 +2,14 @@
 #include <mutex>
 #include <memory>
 
-using namespace std;
-
-class Lock
+class Lock 
 {
-public:
-    explicit Lock(mutex *pm);
-
-private:
-    shared_ptr<mutex> pMutex;
+    public:
+        explicit Lock();
+        ~Lock();
+        Lock(const Lock&) = delete;
+        Lock& operator=(const Lock&) = delete;
 };
 
-void unlock(mutex *pm);
+void listening();
+void finishing();
