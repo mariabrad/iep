@@ -18,7 +18,7 @@ Lock::~Lock(){
 void listening(){
     Lock lock;
     ct++;
-    std::cout<<"Customer number "<<ct<< "is listening\n";
+    std::cout<<"Customer number "<<ct<< " is listening\n";
 }
 
 void finishing(){
