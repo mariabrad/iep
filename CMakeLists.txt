@@ -12,6 +12,9 @@ add_subdirectory( Catalogue )
 add_subdirectory( Customer )
 add_executable( main src/main.cpp)
 
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+
 target_link_libraries(main Headphones)
 target_link_libraries(main Wired)
 target_link_libraries(main Wireless)
