@@ -9,6 +9,20 @@
 #include <mutex>
 #include <thread>
 
+std::mutex m;
+int ct=0;
+void listening(){
+    m.lock();
+    ct++;
+    std::cout<<"Customer number "<<ct<< " is listening\n";
+    m.unlock();
+}
+
+void finishing(){
+    m.lock();
+    std::cout<<"Next customer"<<std::endl;
+    m.unlock();
+}
 int main(){
     char* name = new char[30];
     char* example_name = new char[30];
