@@ -7,6 +7,7 @@
 #include "customer.hpp"
 #include <memory>
 #include <mutex>
+#include <thread>
 
 int main(){
     char* name = new char[30];
@@ -343,7 +344,7 @@ int main(){
             obj10->addToCatalogue(cat.get());
             cat->show();
 
-            shared_ptr<Catalogue> cat2(cat);
+            std::shared_ptr<Catalogue> cat2(cat);
 
             obj4->addToCatalogue(cat2.get());
             cat2->show();
@@ -353,29 +354,21 @@ int main(){
         }
 
         case 13:{
-            std::cout<<"\nEnter wired headphones specifications:\n";
-            std::cout<<"\nName: ";
-            std::cin>>name;
-            std::cout<<"\nPrice: ";
-            std::cin>>price;
-            std::cout<<"\nSensitivity: ";
-            std::cin>>sensitivity;
-            std::cout<<"\nFrequency response: ";
-            std::cin>>frequency_response;
-            std::cout<<"\nInput power: ";
-            std::cin>>input_power;
-            std::cout<<"\nWire length: ";
-            std::cin>>wire_length;
-            obj1= new Wired(name, price, sensitivity, frequency_response, input_power, wire_length);
-            Wired* wired1= new Wired(example_name,example_price,example_sensitivity, example_frequency_response, example_input_power, example_wire_length);
-            Catalogue * cat= new Catalogue("Bose");
-            mutex mut;
-            mut.lock();
-            wired1->addToCatalogue(cat);
-            mut.unlock();
-            obj1->addToCatalogue(cat);
-            cat->show();
-            std::cout<<"\n";
+            std::thread t1(listening);
+            std::thread t11(finishing);
+            std::thread t2(listening);
+            std::thread t22(finishing);
+            std::thread t3(listening);
+            std::thread t33(finishing);
+
+
+            t1.join();
+            t11.join();
+            t2.join();
+            t22.join();
+            t3.join();
+            t33.join();
+
             
         }
         case 0:
